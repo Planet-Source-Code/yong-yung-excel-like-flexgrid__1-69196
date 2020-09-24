@@ -1,0 +1,836 @@
+VERSION 5.00
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
+Begin VB.PropertyPage pagBitmaps 
+   Caption         =   "Menu Icons"
+   ClientHeight    =   5025
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   7185
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   5025
+   ScaleWidth      =   7185
+   Begin VB.Frame fraCommon 
+      Caption         =   "Common"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   7.5
+         Charset         =   204
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   1815
+      Left            =   5075
+      TabIndex        =   0
+      Top             =   2450
+      Width           =   2025
+      Begin VB.CheckBox chkSystemFont 
+         Caption         =   "Use system font"
+         Height          =   345
+         Left            =   240
+         TabIndex        =   13
+         Top             =   720
+         Width           =   1692
+      End
+      Begin VB.ComboBox cobSize 
+         Height          =   315
+         Left            =   168
+         TabIndex        =   3
+         Top             =   1320
+         Width           =   1356
+      End
+      Begin VB.CheckBox chkDisabled 
+         Caption         =   "Select disabled menu items"
+         Height          =   432
+         Left            =   240
+         TabIndex        =   1
+         Top             =   240
+         Width           =   1692
+      End
+      Begin VB.Label Label6 
+         Caption         =   "px"
+         Height          =   270
+         Left            =   1680
+         TabIndex        =   4
+         Top             =   1320
+         Width           =   270
+      End
+      Begin VB.Label Label5 
+         Caption         =   "Bitmap size:"
+         Height          =   270
+         Left            =   240
+         TabIndex        =   2
+         Top             =   1080
+         Width           =   1530
+      End
+   End
+   Begin VB.Frame Frame1 
+      Height          =   4260
+      Left            =   120
+      TabIndex        =   19
+      Top             =   0
+      Width           =   4815
+      Begin VB.CommandButton cmdRemove 
+         Height          =   285
+         Left            =   3600
+         Picture         =   "pagBitmaps.pgx":0000
+         Style           =   1  'Graphical
+         TabIndex        =   23
+         Top             =   240
+         Width           =   300
+      End
+      Begin VB.CommandButton cmdAdd 
+         Height          =   285
+         Left            =   3240
+         Picture         =   "pagBitmaps.pgx":014A
+         Style           =   1  'Graphical
+         TabIndex        =   22
+         Top             =   240
+         Width           =   300
+      End
+      Begin VB.CommandButton cmdClear 
+         Caption         =   "Clear"
+         Height          =   288
+         Left            =   3960
+         Picture         =   "pagBitmaps.pgx":0294
+         TabIndex        =   21
+         Top             =   240
+         Width           =   720
+      End
+      Begin Project1.ctxCoolList lstMenu 
+         Height          =   3360
+         Left            =   120
+         TabIndex        =   20
+         Top             =   600
+         Width           =   4575
+         _ExtentX        =   8070
+         _ExtentY        =   5927
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         FontSelected    =   16576
+         BackSelected    =   16744576
+         BoxBorder       =   8388608
+         Focus           =   0   'False
+         ItemHeight      =   20
+         ItemHeightAuto  =   0   'False
+         ItemOffset      =   2
+         SelectModeStyle =   4
+         DrawStyle       =   2
+      End
+      Begin VB.Label labNum 
+         Height          =   270
+         Left            =   1080
+         TabIndex        =   24
+         Top             =   240
+         Width           =   1650
+      End
+      Begin VB.Label labMenu 
+         Caption         =   "Menu items:"
+         Height          =   270
+         Left            =   120
+         TabIndex        =   25
+         Top             =   240
+         Width           =   885
+      End
+   End
+   Begin VB.Frame fraCustom 
+      Caption         =   " Custom"
+      Height          =   735
+      Left            =   120
+      TabIndex        =   14
+      Top             =   4250
+      Width           =   6975
+      Begin VB.ComboBox cboAutoColumn 
+         Height          =   315
+         Left            =   6120
+         Style           =   2  'Dropdown List
+         TabIndex        =   27
+         Top             =   240
+         Width           =   735
+      End
+      Begin VB.ComboBox cboDraw 
+         Height          =   315
+         Left            =   3720
+         Style           =   2  'Dropdown List
+         TabIndex        =   16
+         Top             =   240
+         Width           =   1356
+      End
+      Begin VB.ComboBox cboMenuStyle 
+         Height          =   315
+         Left            =   1440
+         Style           =   2  'Dropdown List
+         TabIndex        =   15
+         Top             =   240
+         Width           =   1356
+      End
+      Begin VB.Label Label7 
+         BackStyle       =   0  'Transparent
+         Caption         =   "AutoColumns"
+         Height          =   255
+         Left            =   5160
+         TabIndex        =   26
+         Top             =   300
+         Width           =   975
+      End
+      Begin VB.Label Label1 
+         BackStyle       =   0  'Transparent
+         Caption         =   " Draw Style"
+         Height          =   255
+         Left            =   2805
+         TabIndex        =   18
+         Top             =   300
+         Width           =   975
+      End
+      Begin VB.Label lblMenuStyle 
+         BackStyle       =   0  'Transparent
+         Caption         =   "Menu Draw Style"
+         Height          =   375
+         Left            =   120
+         TabIndex        =   17
+         Top             =   300
+         Width           =   1335
+      End
+   End
+   Begin MSComDlg.CommonDialog comDlg 
+      Left            =   2856
+      Top             =   1932
+      _ExtentX        =   688
+      _ExtentY        =   688
+      _Version        =   393216
+      CancelError     =   -1  'True
+      Filter          =   "Icons And Graphics (*.ico;*.bmp;*.gif;*.jpg)|*.ico;*.bmp;*.gif;*.jpg|All files (*.*)|*.*"
+      Flags           =   4
+      FontBold        =   -1  'True
+      FontItalic      =   -1  'True
+      FontStrikeThru  =   -1  'True
+      FontUnderLine   =   -1  'True
+   End
+   Begin VB.Frame fraControls 
+      Caption         =   "Menu Icon"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   7.5
+         Charset         =   204
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2415
+      Left            =   5075
+      TabIndex        =   5
+      Top             =   0
+      Width           =   2040
+      Begin VB.ComboBox cobMaskColor 
+         Height          =   315
+         Left            =   240
+         TabIndex        =   9
+         Top             =   1920
+         Width           =   1620
+      End
+      Begin VB.ComboBox cobMenus 
+         Height          =   315
+         Left            =   240
+         TabIndex        =   8
+         Text            =   "cobMenus"
+         Top             =   480
+         Width           =   1620
+      End
+      Begin VB.PictureBox picBmp 
+         Height          =   645
+         Left            =   840
+         ScaleHeight     =   585
+         ScaleWidth      =   975
+         TabIndex        =   7
+         Top             =   960
+         Width           =   1035
+         Begin VB.Image imgBmp 
+            Height          =   345
+            Left            =   360
+            MousePointer    =   15  'Size All
+            Top             =   120
+            Width           =   345
+         End
+      End
+      Begin VB.CommandButton cmdOpen 
+         Height          =   285
+         Left            =   360
+         Picture         =   "pagBitmaps.pgx":03DE
+         Style           =   1  'Graphical
+         TabIndex        =   6
+         Top             =   1200
+         Width           =   300
+      End
+      Begin VB.Label Label4 
+         Caption         =   "Menu Item:"
+         Height          =   270
+         Left            =   240
+         TabIndex        =   12
+         Top             =   240
+         Width           =   930
+      End
+      Begin VB.Label Label3 
+         Caption         =   "Mask Color:"
+         Height          =   270
+         Left            =   240
+         TabIndex        =   11
+         Top             =   1680
+         Width           =   1020
+      End
+      Begin VB.Label Label2 
+         Caption         =   "Bitmap:"
+         Height          =   270
+         Left            =   240
+         TabIndex        =   10
+         Top             =   960
+         Width           =   1110
+      End
+   End
+End
+Attribute VB_Name = "pagBitmaps"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+'==============================================================================
+' pagBitmaps.pag
+'
+'   Subclassing Thunk (SuperClass V2) Project Samples
+'   Copyright (c) 2002 by Vlad Vissoultchev <wqweto@myrealbox.com>
+'
+'   Office XP menus control property page
+'
+' Modifications:
+'
+' 2002-10-28    WQW     Initial implementation
+'
+'==============================================================================
+Option Explicit
+
+'==============================================================================
+' API
+'==============================================================================
+
+Private Const LB_SETTABSTOPS            As Long = &H192
+
+Private Declare Function SendMessage Lib "user32" Alias "SendMessageA" (ByVal hwnd As Long, ByVal wMsg As Long, ByVal wParam As Long, lParam As Any) As Long
+
+'==============================================================================
+' Constants and member variables
+'==============================================================================
+
+Private m_oControl              As ctxHookMenu
+Private m_cBmps                 As Collection
+Private m_lLoaded               As Long
+Private m_bInSet                As Boolean
+Private m_bDrag                 As Boolean
+Private m_sX                    As Single
+Private m_sY                    As Single
+Private m_bModified             As Boolean
+Private m_bChanged              As Boolean
+
+Private Sub cboAutoColumn_Change()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cboAutoColumn_Click()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cboDraw_Change()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cboDraw_Click()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cboMenuStyle_Change()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cboMenuStyle_Click()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+'==============================================================================
+' Control events
+'==============================================================================
+
+Private Sub chkDisabled_Click()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub chkSystemFont_Click()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cmdAdd_Click()
+
+  Dim vElem           As Variant
+  Dim vSplit          As Variant
+  Dim i As Integer
+
+    i = lstMenu.ListIndex
+    If lstMenu.ListIndex >= 0 Then
+        vSplit = Split(lstMenu.ItemText(lstMenu.ListIndex), vbTab)
+        If vSplit(0) = "" Then
+            pvUpload
+            ReDim vElem(0 To 2)
+            Set vElem(0) = Nothing
+            vElem(1) = &HFF00FF
+            vElem(2) = "#" & vSplit(2)
+            m_cBmps.Add vElem, vElem(2)
+            pvFillControls
+            lstMenu.ListIndex = i
+            lstMenu_Click
+            Modified = True
+        End If
+    End If
+
+    lstMenu.ListIndex = i
+
+End Sub
+
+Private Sub cmdClear_Click()
+
+  Dim Ret
+
+    Ret = MsgBox("Are you sure you want to remove all Icons?", vbYesNo + vbQuestion, "Clear")
+    If Ret = vbYes Then
+        Do While m_cBmps.Count > 0
+            m_cBmps.Remove 1
+        Loop
+        m_lLoaded = 0
+        pvFillControls
+        lstMenu_Click
+        Modified = True
+    End If
+
+End Sub
+
+Private Sub cmdOpen_Click()
+
+    On Error GoTo EH_Cancel
+    comDLG.ShowOpen
+    Set imgBmp = Nothing
+    Set imgBmp.Picture = LoadPicture(comDLG.FileName)
+    With New cMemDC
+        .PaintPicture imgBmp.Picture
+        cobMaskColor.Text = "#" & Hex(.GetPixel(0, .Height - 1))
+    End With
+    pvCenterIcons
+
+    If Not m_bInSet Then Modified = True
+EH_Cancel:
+
+End Sub
+
+Private Sub cmdRemove_Click()
+
+  Dim vSplit          As Variant
+  Dim i As Integer
+
+    i = lstMenu.ListIndex
+
+    If lstMenu.ListIndex >= 0 Then
+        vSplit = Split(lstMenu.ItemText(lstMenu.ListIndex), vbTab)
+        If vSplit(0) <> "" Then
+            m_cBmps.Remove "#" & vSplit(2)
+            m_lLoaded = 0
+        End If
+        pvFillControls
+        m_lLoaded = 0
+        lstMenu.ListIndex = i
+        lstMenu_Click
+        Modified = True
+        Changed = True
+    End If
+
+End Sub
+
+Private Sub cobMaskColor_Change()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cobMaskColor_Click()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cobMenus_Change()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cobMenus_Click()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cobSize_Change()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub cobSize_Click()
+
+    If Not m_bInSet Then Modified = True
+
+End Sub
+
+Private Sub imgBmp_MouseDown(Button As Integer, Shift As Integer, x As Single, y As Single)
+
+    On Error Resume Next
+        m_bDrag = True
+        m_sX = x
+        m_sY = y
+    On Error GoTo 0
+
+End Sub
+
+Private Sub imgBmp_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
+
+    On Error Resume Next
+        If m_bDrag Then
+            With imgBmp
+                .Move .Left + (x - m_sX), .Top + (y - m_sY)
+            End With
+        End If
+    On Error GoTo 0
+
+End Sub
+
+Private Sub imgBmp_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
+
+    On Error Resume Next
+        imgBmp_MouseMove Button, Shift, x, y
+        With imgBmp
+            If .Width < picBmp.ScaleWidth Then
+                .Left = (picBmp.ScaleWidth - .Width) \ 2
+              Else
+                If .Left < picBmp.ScaleWidth - .Width Then
+                    .Left = picBmp.ScaleWidth - .Width
+                End If
+                If .Left > 0 Then
+                    .Left = 0
+                End If
+            End If
+            If .Height < picBmp.ScaleHeight Then
+                .Top = (picBmp.ScaleHeight - .Height) \ 2
+              Else
+                If .Top < picBmp.ScaleHeight - .Height Then
+                    .Top = picBmp.ScaleHeight - .Height
+                End If
+                If .Top > 0 Then
+                    .Top = 0
+                End If
+            End If
+        End With
+        m_bDrag = False
+    On Error GoTo 0
+
+End Sub
+
+Private Sub lstMenu_Click()
+
+  Dim vElem As Variant
+
+    If m_bInSet Then
+        Exit Sub
+    End If
+    pvUpload
+    'Debug.Print lstMenus.itemData(lstMenus.ListIndex)
+    If lstMenu.ListIndex >= 0 Then
+        m_lLoaded = lstMenu.ItemData(lstMenu.ListIndex) 'lstMenus.itemData(lstMenus.ListIndex)
+      Else
+        m_lLoaded = 0
+    End If
+    If m_lLoaded > 0 Then
+        m_bInSet = True
+
+        vElem = m_cBmps(m_lLoaded)
+        cobMenus.Text = Mid(vElem(2), 2)
+        Set imgBmp.Picture = Nothing
+        If Not vElem(0) Is Nothing Then Set imgBmp.Picture = vElem(0)
+        pvCenterIcons
+        cobMaskColor.Text = "#" & Hex(vElem(1))
+        m_bInSet = False
+        fraControls.Visible = True
+        cmdAdd.Enabled = False
+        cmdRemove.Enabled = True
+      Else
+        cmdAdd.Enabled = True
+        cmdRemove.Enabled = False
+        fraControls.Visible = False
+    End If
+
+    If lstMenu.ListIndex >= 0 Then
+        If lstMenu.ItemSeperator(lstMenu.ListIndex) Then
+            cmdAdd.Enabled = False
+            cmdRemove.Enabled = False
+        End If
+    End If
+
+End Sub
+
+Private Sub lstMenu_DblClick()
+
+    If lstMenu.ListIndex >= 0 Then
+        If Not lstMenu.ItemSeperator(lstMenu.ListIndex) Then cmdAdd_Click
+    End If
+
+End Sub
+
+Property Get Modified() As Boolean
+
+    Modified = m_bModified
+
+End Property
+
+Property Let Modified(ByVal bValue As Boolean)
+
+    m_bChanged = m_bChanged Or bValue
+    m_bModified = bValue
+    Changed = m_bChanged
+
+End Property
+
+Private Sub PropertyPage_ApplyChanges()
+
+    pvUpload
+    Set m_oControl.frBmps = m_cBmps
+    Set m_oControl = Nothing
+    '--- i never knew i had to manually clear Changed property!!!
+    Changed = False
+
+End Sub
+
+Private Sub PropertyPage_Initialize()
+
+  Dim aTabStop(0 To 1)    As Long
+  Dim i As Long
+
+    For i = 0 To 999
+        cboAutoColumn.AddItem i
+    Next i
+
+    cobMaskColor.AddItem "#FF00FF - Magenta"
+    cobMaskColor.AddItem "#C0C0C0 - Grey"
+    cobSize.AddItem "16"
+    cobSize.AddItem "20"
+    cobSize.AddItem "24"
+    cobSize.AddItem "28"
+    cobSize.AddItem "32"
+
+    cboMenuStyle.AddItem "Default", 0
+    cboMenuStyle.AddItem "Xp Style", 1
+
+    cboDraw.AddItem "Default", 0
+    cboDraw.AddItem "Custom", 1
+
+    lstMenu.SetTabs "30, 150"
+
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+
+  '--- this is the MOST bizarre way to handle it but VB freaks me out!!!
+  '--- this event is raised upon EVERY mouse click on the property page
+  '--- so when you are humbly selecting items in the listbox VB is alerting
+  '--- that you actually changed the selected controls on the form which
+  '--- is obviously not the case
+
+    If Not m_oControl Is SelectedControls(0) Then
+        m_bChanged = False
+        m_lLoaded = 0
+        Set m_oControl = SelectedControls(0)
+        Set m_cBmps = m_oControl.frBmps
+        pvFillControls
+        lstMenu_Click
+        'm_oControl.MenuDrawStyle = m_oControl.MenuDrawStyle
+        'm_oControl.DrawStyle = m_oControl.DrawStyle
+        'MsgBox cboMenuStyle.ListIndex
+
+      Else
+        '--- why is not VB remembering that values were changed
+        '--- is completely beyond me!!
+        Changed = m_bChanged
+    End If
+
+End Sub
+
+Private Sub pvCenterIcons()
+
+    imgBmp.Move (picBmp.ScaleWidth - imgBmp.Width) \ 2, (picBmp.ScaleHeight - imgBmp.Height) \ 2
+    '    picBmp.Visible = False
+    '    picBmp.Visible = True
+
+End Sub
+
+'==============================================================================
+' Methods
+'==============================================================================
+
+Private Sub pvFillControls()
+
+    On Error Resume Next
+      Dim pp As StdPicture
+
+      Dim oCtl            As Object
+      Dim vElem           As Variant
+      Dim lIdx            As Long
+      Dim lTop            As Long
+      Dim lI              As Long
+      Dim sText           As String
+      Dim lItemData       As Long
+
+        m_bInSet = True
+        lIdx = lstMenu.ListIndex
+        lTop = lstMenu.TopIndex
+        'lstMenus.Visible = False
+        'lstMenus.Clear
+        lstMenu.Clear
+
+        For Each oCtl In m_oControl.frContainerMenus
+            sText = vbTab & Replace(oCtl.Caption, vbTab, "\t") & vbTab & pvGetCtlName(oCtl)
+            lItemData = 0
+            For lI = 1 To m_cBmps.Count
+                vElem = m_cBmps(lI)
+                If vElem(2) = "#" & pvGetCtlName(oCtl) Then
+                    sText = "+" & sText
+                    Set pp = vElem(0)
+                    '  MsgBox vElem(0)
+                    lItemData = lI
+                End If
+            Next lI
+
+            If Left(sText, 1) = "+" Then
+                If pp Is Nothing Then
+                    lstMenu.AddItem sText, , , lItemData, Nothing
+                  Else
+                    lstMenu.AddItem sText, , , lItemData, pp
+                End If
+              Else
+                lstMenu.AddItem sText, , , lItemData, Nothing
+            End If
+
+            'lstMenus.AddItem sText
+            'lstMenus.ItemData(lstMenus.NewIndex) = lItemData
+        Next oCtl
+        lstMenu.Visible = True
+
+        If lIdx < lstMenu.ListCount Then
+            lstMenu.ListIndex = lIdx
+          Else
+            lstMenu.ListIndex = lstMenu.ListCount - 1
+        End If
+        lstMenu.TopIndex = lTop
+        cobMenus.Clear
+        For Each oCtl In m_oControl.frContainerMenus
+            If Left(oCtl.Caption, 1) <> "-" Then
+                cobMenus.AddItem pvGetCtlName(oCtl) & " (" & oCtl.Caption & ")"
+            End If
+        Next oCtl
+        '    If lstMenus.ListIndex >= 0 Then
+        '        cobMenus.Text = Split(lstMenus.Text, vbTab)(2)
+        '    End If
+        chkDisabled.Value = IIf(m_oControl.SelectDisabled, vbChecked, vbUnchecked)
+        chkSystemFont.Value = IIf(m_oControl.UseSystemFont, vbChecked, vbUnchecked)
+        cobSize.Text = m_oControl.BitmapSize
+
+        If m_oControl.DrawStyle = MS_Custom Then
+            cboDraw.Text = "Custom"
+          Else
+            cboDraw.Text = "Default"
+        End If
+
+        If m_oControl.MenuDrawStyle = DS_NORMAL Then
+            cboMenuStyle.Text = "Default"
+          Else
+            cboMenuStyle.Text = "XP Style"
+        End If
+
+        cboAutoColumn.Text = m_oControl.AutoColumn
+
+        m_bInSet = False
+        labNum = m_cBmps.Count & " icon(s)"
+
+End Sub
+
+Private Function pvGetCtlName(ByVal oCtl As Control) As String
+
+    On Error Resume Next
+        If oCtl.Index < 0 Then
+            pvGetCtlName = oCtl.Name
+          Else
+            pvGetCtlName = oCtl.Name & ":" & oCtl.Index
+        End If
+    On Error GoTo 0
+
+End Function
+
+Private Function pvUpload() As Boolean
+
+  Dim vElem As Variant
+
+    If m_lLoaded > 0 And Modified Then
+        vElem = m_cBmps(m_lLoaded)
+        m_cBmps.Remove m_lLoaded
+        Set vElem(0) = imgBmp.Picture
+        vElem(1) = Val("&H" & Mid(cobMaskColor.Text, 2))
+        vElem(2) = "#" & Split(cobMenus.Text)(0)
+        On Error Resume Next
+            If m_lLoaded > m_cBmps.Count Then
+                m_cBmps.Add vElem, vElem(2)
+              Else
+                m_cBmps.Add vElem, vElem(2), m_lLoaded
+            End If
+        End If
+        m_oControl.SelectDisabled = (chkDisabled.Value = vbChecked)
+        m_oControl.UseSystemFont = (chkSystemFont.Value = vbChecked)
+        m_oControl.BitmapSize = Val(cobSize.Text)
+        m_oControl.DrawStyle = cboDraw.ListIndex + 1
+        m_oControl.MenuDrawStyle = cboMenuStyle.ListIndex + 1
+        m_oControl.AutoColumn = Val(cboAutoColumn.Text)
+
+        If Modified Then
+            pvFillControls
+            Modified = False
+        End If
+    On Error GoTo 0
+
+End Function
+
+

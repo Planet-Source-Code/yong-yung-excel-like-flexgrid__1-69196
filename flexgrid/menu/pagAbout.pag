@@ -1,0 +1,84 @@
+VERSION 5.00
+Begin VB.PropertyPage About 
+   Caption         =   "About"
+   ClientHeight    =   4980
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   7185
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   4980
+   ScaleMode       =   0  'User
+   ScaleWidth      =   6608.513
+   Begin VB.PictureBox Picture1 
+      Appearance      =   0  'Flat
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   4815
+      Left            =   120
+      ScaleHeight     =   4785
+      ScaleWidth      =   6945
+      TabIndex        =   0
+      Top             =   120
+      Width           =   6975
+      Begin VB.Label lblInfo 
+         BackStyle       =   0  'Transparent
+         Caption         =   $"pagAbout.pgx":0000
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   1455
+         Left            =   2760
+         TabIndex        =   2
+         Top             =   1440
+         Width           =   4095
+      End
+      Begin VB.Line Line1 
+         BorderColor     =   &H00E0E0E0&
+         X1              =   2760
+         X2              =   6840
+         Y1              =   1200
+         Y2              =   1200
+      End
+      Begin VB.Label lblName 
+         BackStyle       =   0  'Transparent
+         Caption         =   "HookMenu"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   14.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   2760
+         TabIndex        =   1
+         Top             =   720
+         Width           =   4095
+      End
+      Begin VB.Image Image1 
+         Height          =   2295
+         Left            =   0
+         Picture         =   "pagAbout.pgx":011F
+         Top             =   0
+         Width           =   3660
+      End
+   End
+End
+Attribute VB_Name = "About"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Private Sub PropertyPage_Initialize()
+    lblName = "HookMenu " & App.Major & "." & App.Minor & "." & App.Revision
+
+End Sub
+
