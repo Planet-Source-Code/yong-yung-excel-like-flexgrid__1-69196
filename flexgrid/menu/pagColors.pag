@@ -1,0 +1,561 @@
+VERSION 5.00
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
+Begin VB.PropertyPage pagColors 
+   Caption         =   "Custom (Other)"
+   ClientHeight    =   5025
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   7185
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   5025
+   ScaleWidth      =   7185
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   13
+      Left            =   4080
+      MouseIcon       =   "pagColors.pgx":0000
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   26
+      Top             =   600
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   12
+      Left            =   4080
+      MouseIcon       =   "pagColors.pgx":0152
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   24
+      Top             =   240
+      Width           =   375
+   End
+   Begin MSComDlg.CommonDialog comDLG 
+      Left            =   360
+      Top             =   4080
+      _ExtentX        =   847
+      _ExtentY        =   847
+      _Version        =   393216
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   11
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":02A4
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   11
+      Top             =   4200
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   10
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":03F6
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   10
+      Top             =   3840
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   9
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":0548
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   9
+      Top             =   3480
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   8
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":069A
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   8
+      Top             =   3120
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   7
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":07EC
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   7
+      Top             =   2760
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   6
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":093E
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   6
+      Top             =   2400
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   5
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":0A90
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   5
+      Top             =   2040
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   4
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":0BE2
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   4
+      Top             =   1680
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   3
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":0D34
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   3
+      Top             =   1320
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   2
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":0E86
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   2
+      Top             =   960
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   1
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":0FD8
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   1
+      Top             =   600
+      Width           =   375
+   End
+   Begin VB.PictureBox picCustomColor 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Index           =   0
+      Left            =   120
+      MouseIcon       =   "pagColors.pgx":112A
+      MousePointer    =   99  'Custom
+      ScaleHeight     =   225
+      ScaleWidth      =   345
+      TabIndex        =   0
+      Top             =   240
+      Width           =   375
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Selected Item BackColour"
+      Height          =   255
+      Index           =   13
+      Left            =   4560
+      MouseIcon       =   "pagColors.pgx":127C
+      MousePointer    =   99  'Custom
+      TabIndex        =   27
+      Top             =   600
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Selected Item Fore Colour"
+      Height          =   255
+      Index           =   12
+      Left            =   4560
+      MouseIcon       =   "pagColors.pgx":13CE
+      MousePointer    =   99  'Custom
+      TabIndex        =   25
+      Top             =   240
+      Width           =   2775
+   End
+   Begin VB.Line Line2 
+      BorderColor     =   &H00E0E0E0&
+      X1              =   3840
+      X2              =   3840
+      Y1              =   240
+      Y2              =   4440
+   End
+   Begin VB.Line Line1 
+      BorderColor     =   &H00808080&
+      BorderWidth     =   2
+      X1              =   3840
+      X2              =   3840
+      Y1              =   240
+      Y2              =   4440
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Expanded Top Menu Selected Back Colour"
+      Height          =   255
+      Index           =   3
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":1520
+      MousePointer    =   99  'Custom
+      TabIndex        =   15
+      Top             =   1320
+      Width           =   3375
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Second Gradient Colour"
+      Height          =   255
+      Index           =   11
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":1672
+      MousePointer    =   99  'Custom
+      TabIndex        =   23
+      Top             =   4200
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "First Gradient Colour"
+      Height          =   255
+      Index           =   10
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":17C4
+      MousePointer    =   99  'Custom
+      TabIndex        =   22
+      Top             =   3840
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Check Box Border Colour"
+      Height          =   255
+      Index           =   9
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":1916
+      MousePointer    =   99  'Custom
+      TabIndex        =   21
+      Top             =   3480
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Check Box Colour"
+      Height          =   255
+      Index           =   8
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":1A68
+      MousePointer    =   99  'Custom
+      TabIndex        =   20
+      Top             =   3120
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "SideBar Colour"
+      Height          =   255
+      Index           =   7
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":1BBA
+      MousePointer    =   99  'Custom
+      TabIndex        =   19
+      Top             =   2760
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Menu Border Colour"
+      Height          =   255
+      Index           =   6
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":1D0C
+      MousePointer    =   99  'Custom
+      TabIndex        =   18
+      Top             =   2400
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Top Menu Hot Border"
+      Height          =   255
+      Index           =   5
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":1E5E
+      MousePointer    =   99  'Custom
+      TabIndex        =   17
+      Top             =   2040
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Top Menu Hot Colour"
+      Height          =   255
+      Index           =   4
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":1FB0
+      MousePointer    =   99  'Custom
+      TabIndex        =   16
+      Top             =   1680
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Top Menu Selected Colour"
+      Height          =   255
+      Index           =   2
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":2102
+      MousePointer    =   99  'Custom
+      TabIndex        =   14
+      Top             =   960
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Top Menu Back Colour"
+      Height          =   255
+      Index           =   1
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":2254
+      MousePointer    =   99  'Custom
+      TabIndex        =   13
+      Top             =   600
+      Width           =   2775
+   End
+   Begin VB.Label lblCustomColor 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Selected Menu Border Colour"
+      Height          =   255
+      Index           =   0
+      Left            =   600
+      MouseIcon       =   "pagColors.pgx":23A6
+      MousePointer    =   99  'Custom
+      TabIndex        =   12
+      Top             =   240
+      Width           =   2775
+   End
+End
+Attribute VB_Name = "pagColors"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+'==============================================================================
+' pagColors.pag
+'
+'   Office XP menus control property page
+'
+' Modifications:
+'
+' 2003-11-10    GWN     Initial implementation
+'
+'==============================================================================
+Option Explicit
+'==============================================================================
+' Constants and member variables
+'==============================================================================
+
+Private m_oControl              As ctxHookMenu
+Private m_bModified             As Boolean
+Private m_bChanged              As Boolean
+Private mIndex                  As Integer
+
+Private Sub lblCustomColor_Click(Index As Integer)
+   
+    DisplayColour Index
+
+End Sub
+
+Private Sub lblCustomColor_MouseMove(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
+    
+    Dim i As Integer
+    
+    If mIndex = Index Then Exit Sub
+    
+    For i = 0 To lblCustomColor.Count - 1
+        lblCustomColor(i).ForeColor = vbBlack
+        lblCustomColor(i).FontUnderline = False
+    Next
+        
+    lblCustomColor(Index).ForeColor = vbBlue
+    lblCustomColor(Index).FontUnderline = True
+    
+    mIndex = Index
+    
+End Sub
+
+Private Sub picCustomColor_Click(Index As Integer)
+
+    DisplayColour Index
+    
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+    pvUpload
+    Set m_oControl = Nothing
+    Changed = False
+End Sub
+
+
+Private Sub PropertyPage_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
+    Dim i As Integer
+    
+    For i = 0 To lblCustomColor.Count - 1
+        lblCustomColor(i).ForeColor = vbBlack
+        lblCustomColor(i).FontUnderline = False
+    Next
+    mIndex = 99
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+    
+    If Not m_oControl Is SelectedControls(0) Then
+        m_bChanged = False
+        Set m_oControl = SelectedControls(0)
+        pvFillControls
+    Else
+        Changed = m_bChanged
+    End If
+End Sub
+
+
+Private Sub pvFillControls()
+'-- Get The Settings
+    picCustomColor(0).BackColor = m_oControl.UserSelectedMenuBorderColour
+    picCustomColor(1).BackColor = m_oControl.UserTopMenuBackColour
+    picCustomColor(2).BackColor = m_oControl.UserTopMenuBackColour
+    picCustomColor(3).BackColor = m_oControl.UserTopMenuSelectedColour
+    picCustomColor(4).BackColor = m_oControl.UserTopMenuHotColour
+    picCustomColor(5).BackColor = m_oControl.UserTopMenuHotBorderColour
+    picCustomColor(6).BackColor = m_oControl.UserMenuBorderColour
+    picCustomColor(7).BackColor = m_oControl.UserSideBarColour
+    picCustomColor(8).BackColor = m_oControl.UserCheckBackColour
+    picCustomColor(9).BackColor = m_oControl.UserCheckBorderColour
+    picCustomColor(10).BackColor = m_oControl.UserGradientOne
+    picCustomColor(11).BackColor = m_oControl.UserGradientTwo
+    picCustomColor(12).BackColor = m_oControl.UserSelectedItemForeColour
+    picCustomColor(13).BackColor = m_oControl.UserSelectedMenuBackColour
+    
+End Sub
+
+Private Sub pvUpload()
+'-- Save The Settings
+    m_oControl.UserSelectedMenuBorderColour = picCustomColor(0).BackColor
+    m_oControl.UserTopMenuBackColour = picCustomColor(1).BackColor
+    m_oControl.UserTopMenuBackColour = picCustomColor(2).BackColor
+    m_oControl.UserTopMenuSelectedColour = picCustomColor(3).BackColor
+    m_oControl.UserTopMenuHotColour = picCustomColor(4).BackColor
+    m_oControl.UserTopMenuHotBorderColour = picCustomColor(5).BackColor
+    m_oControl.UserMenuBorderColour = picCustomColor(6).BackColor
+    m_oControl.UserSideBarColour = picCustomColor(7).BackColor
+    m_oControl.UserCheckBackColour = picCustomColor(8).BackColor
+    m_oControl.UserCheckBorderColour = picCustomColor(9).BackColor
+    m_oControl.UserGradientOne = picCustomColor(10).BackColor
+    m_oControl.UserGradientTwo = picCustomColor(11).BackColor
+    m_oControl.UserSelectedItemForeColour = picCustomColor(12).BackColor
+    m_oControl.UserSelectedMenuBackColour = picCustomColor(13).BackColor
+    
+End Sub
+
+Private Sub DisplayColour(Index As Integer)
+'-- Sets The Colour For The Selected Property
+    With comDLG
+        .Flags = cdlCCRGBInit
+        .Color = picCustomColor(Index).BackColor
+        .ShowColor
+        If .Color <> picCustomColor(Index).BackColor Then
+                picCustomColor(Index).BackColor = .Color
+                Changed = True
+        End If
+    End With
+End Sub
+
